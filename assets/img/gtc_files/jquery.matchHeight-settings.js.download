@@ -1,0 +1,6 @@
+jQuery('.featured-stories .owl-carousel .post-boxed, .content-area .owl-carousel .post-boxed, .site-content .widget-area .owl-carousel .post-boxed, .site-footer .widget-area .owl-carousel .post-boxed, .newscard-widget-double-column-posts .main-post.post-boxed').matchHeight({
+	property: 'min-height'
+});
+jQuery('.newscard-widget-double-column-posts .title-wrap, .featured-section .title-wrap').matchHeight({
+	property: 'min-height'
+});

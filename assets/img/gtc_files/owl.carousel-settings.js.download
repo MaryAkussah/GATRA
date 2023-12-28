@@ -1,0 +1,203 @@
+// Featured Slider
+jQuery('.featured-slider .owl-carousel').owlCarousel({
+	loop:true,
+	margin:0,
+	nav:true,
+	navText: ['', ''],
+	autoplay: true,
+	dots: false,
+	smartSpeed: 800,
+	autoplayTimeout: 5500,
+	responsive:{
+		0:{
+			items:1
+		},
+	}
+});
+
+jQuery('.featured-stories .owl-carousel-default').owlCarousel({
+	loop:true,
+	margin:8,
+	nav:true,
+	navText: ['', ''],
+	autoplay: true,
+	dots: false,
+	responsive:{
+		992:{
+			items:4
+		},
+		768:{
+			items:3
+		},
+		575:{
+			items:2
+		},
+		0:{
+			items:1
+		},
+	}
+});
+
+jQuery('.featured-stories .owl-carousel-default-fullwidth').owlCarousel({
+	loop:true,
+	margin:8,
+	nav:true,
+	navText: ['', ''],
+	autoplay: true,
+	dots: false,
+	responsive:{
+		1400:{
+			items:5
+		},
+		992:{
+			items:4
+		},
+		768:{
+			items:3
+		},
+		575:{
+			items:2
+		},
+		0:{
+			items:1
+		},
+	}
+});
+
+jQuery('.featured-stories .owl-carousel-center-default').owlCarousel({
+	loop:true,
+	margin:8,
+	stagePadding:40,
+	nav:true,
+	navText: ['', ''],
+	autoplay: true,
+	dots: false,
+	responsive:{
+		1200:{
+			items:4
+		},
+		950:{
+			items:3,
+			stagePadding:30,
+		},
+		620:{
+			items:2,
+			stagePadding:30,
+		},
+		500:{
+			items:1,
+			margin: 10,
+		},
+		0:{
+			items:1,
+			stagePadding:25,
+			margin: 10,
+		},
+	}
+});
+jQuery('.featured-stories .owl-carousel-center-full-width').owlCarousel({
+	loop:true,
+	margin:8,
+	stagePadding:40,
+	nav:true,
+	navText: ['', ''],
+	autoplay: true,
+	dots: false,
+	responsive:{
+		1500:{
+			items:5
+		},
+		1150:{
+			items:4,
+			stagePadding:30,
+		},
+		850:{
+			items:3,
+			stagePadding:30,
+		},
+		620:{
+			items:2,
+			stagePadding:30,
+		},
+		500:{
+			items:1,
+			margin: 10,
+		},
+		0:{
+			items:1,
+			stagePadding:25,
+			margin: 10,
+		},
+	}
+});
+
+jQuery('.newscard-widget-card-block-posts .owl-carousel.column-1, .site-footer .widget-area .newscard-widget-card-block-posts .owl-carousel.column-2, .site-footer .widget-area .newscard-widget-card-block-posts .owl-carousel.column-3').owlCarousel({
+	loop:true,
+	margin:12,
+	nav:true,
+	navText: ['', ''],
+	autoplay: true,
+	dots: false,
+	responsive:{
+		0:{
+			items:1
+		},
+	}
+});
+
+jQuery('.content-area .newscard-widget-card-block-posts .owl-carousel.column-2').owlCarousel({
+	loop:true,
+	margin:12,
+	nav:true,
+	navText: ['', ''],
+	autoplay: true,
+	dots: false,
+	responsive:{
+		575:{
+			items:2
+		},
+		0:{
+			items:1
+		},
+	}
+});
+
+jQuery('.site-content .widget-area .newscard-widget-card-block-posts .owl-carousel.column-2, .site-content .widget-area .newscard-widget-card-block-posts .owl-carousel.column-3').owlCarousel({
+	loop:true,
+	margin:12,
+	nav:true,
+	navText: ['', ''],
+	autoplay: true,
+	dots: false,
+	responsive:{
+		992:{
+			items:1
+		},
+		575:{
+			items:2
+		},
+		0:{
+			items:1
+		},
+	}
+});
+
+jQuery('.content-area .newscard-widget-card-block-posts .owl-carousel.column-3').owlCarousel({
+	loop:true,
+	margin:12,
+	nav:true,
+	navText: ['', ''],
+	autoplay: true,
+	dots: false,
+	responsive:{
+		1200:{
+			items:3
+		},
+		575:{
+			items:2
+		},
+		0:{
+			items:1
+		},
+	}
+});

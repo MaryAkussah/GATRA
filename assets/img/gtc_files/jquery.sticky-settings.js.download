@@ -1,0 +1,78 @@
+// sticky
+jQuery(window).load(function(){
+	var site_content_row = jQuery('.site-content-row')[0],
+	wp_adminBar = jQuery('#wpadminbar').outerHeight(),
+	sticky_navigation = jQuery('#sticky-navigation-bar').outerHeight(),
+	top_spacing = 20,
+	screenwidth = jQuery(window).outerWidth();
+
+	if ( site_content_row ) {
+		var page_height  = jQuery('body.theme-body').outerHeight(),
+			page_before_height = jQuery('body.theme-body').offset().top,
+			total_page_height = page_height + page_before_height,
+			before_content_height = jQuery('.site-content-row').offset().top,
+			content_height = jQuery('.site-content-row').outerHeight(),
+			after_height = total_page_height - before_content_height - content_height;
+	}
+
+	if (wp_adminBar || sticky_navigation) {
+		if (wp_adminBar && !sticky_navigation) {
+			top_spacing = top_spacing + wp_adminBar;
+		}
+		if (sticky_navigation && !wp_adminBar) {
+			top_spacing = top_spacing + sticky_navigation;
+		}
+		if (wp_adminBar && sticky_navigation) {
+			top_spacing = top_spacing + wp_adminBar + sticky_navigation;
+		}
+	}
+	if (screenwidth >= 992 ) {
+		jQuery(".sticky-sidebar").sticky({ topSpacing: top_spacing, bottomSpacing: after_height, });
+	}
+
+	// For Sticky Navigation
+	var navbar_top_spacing = 0;
+
+	if (wp_adminBar && screenwidth >= 601) {
+		navbar_top_spacing = wp_adminBar;
+	}
+	// triggering sticky navigation
+	jQuery("#sticky-navigation-bar").sticky({ topSpacing: navbar_top_spacing, zIndex: 999});
+
+	//event when loading, resizing and scrolling page
+	jQuery(window).on("load resize scroll",function(e){
+		if (window.pageYOffset >= 1) {
+			var default_navbar = jQuery('#sticky-navigation-bar').outerHeight(),
+				responsive_navbar = jQuery('#sticky-navigation-bar .navigation-bar-top').outerHeight(),
+				screenheight = jQuery(window).outerHeight(),
+				screenwidth = jQuery(window).outerWidth(),
+				wp_adminBar = jQuery('#wpadminbar').outerHeight(),
+				active_sticky = jQuery('#sticky-navigation-bar').parent().hasClass('is-sticky');
+
+			if (screenwidth >= 992) {
+				if (active_sticky) {
+					jQuery('#sticky-navigation-bar').parent('.is-sticky').css('padding-top', default_navbar);
+				} else {
+					jQuery('#sticky-navigation-bar').parent().css('padding-top', 0);
+				}
+			} else {
+				if (active_sticky) {
+					jQuery('#sticky-navigation-bar').parent('.is-sticky').css('padding-top', responsive_navbar);
+				} else {
+					jQuery('#sticky-navigation-bar').parent().css('padding-top', 0);
+				}
+				if (screenwidth <= 991) {
+					if (screenwidth >= 601 && wp_adminBar) {
+						responsive_navbar = responsive_navbar + wp_adminBar;
+					}
+					if (active_sticky) {
+						jQuery('#sticky-navigation-bar').parent('.is-sticky').find('.navbar-collapse').css('max-height', screenheight - responsive_navbar);
+					}
+					else {
+						jQuery('#sticky-navigation-bar').find('.navbar-collapse').css('max-height', 'none');
+					}
+				}
+			}
+		}
+	});
+});
