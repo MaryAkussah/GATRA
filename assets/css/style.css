@@ -273,7 +273,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #37423b;
+  color: #e1d07a;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -2273,21 +2273,11 @@ section {
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.blog .thumbnail {
-  position: relative;
-  overflow: hidden;
-}
-.blog .thumbnail .image {
-  display: block;
-}
-.blog .thumbnail .image img {
-  width: 100%;
-  -webkit-transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
-  transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
-}
+
+
 .blog .info {
   position: relative;
-  padding: 10px 0;
+  color:#000;
 }
 .blog .info .title {
   font-size: 24px;
@@ -2331,8 +2321,8 @@ section {
 /* 08.02. Blog Two CSS */
 .blog-3 {
   height: 100%;
-  margin-bottom: 80px;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   border-bottom: 1px solid #F3F3F3;
@@ -2342,8 +2332,9 @@ section {
   overflow: hidden;
   border-radius: 5px;
 }
-.blog-3 .thumbnail .image {
-  display: block;
+ .thumbnail .image {
+  width: 100%;
+  height: 400px;
 }
 .blog-3 .thumbnail .image img {
   width: 100%;
@@ -2352,7 +2343,13 @@ section {
 }
 .blog-3 .info {
   position: relative;
-  padding: 30px 0 0;
+}
+
+.blog-3 .info {
+  position: relative;
+}
+.blog-3 .info .meta {
+  font-size: 14px;
 }
 .blog-3 .info .meta {
   font-size: 14px;
@@ -2369,6 +2366,8 @@ section {
   margin-bottom: 30px;
   padding-left: 0;
   list-style: none;
+  color: #030f27;
+
 }
 .blog-3 .info .meta li {
   margin-right: 28px;
@@ -2390,15 +2389,20 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+          
 }
 .blog-3 .info .title {
   font-size: 32px;
   line-height: 44px;
   font-weight: 600;
   margin: 0;
+  color: #000;
+
 }
 .blog-3 .info .desc {
   margin-top: 30px;
+  color: #000;
+
 }
 .blog-3 .info .desc strong {
   color: #030f27;
@@ -2418,6 +2422,10 @@ section {
     margin: 25px 0 20px 0px;
   }
 }
+.thumbnail .image {
+  width: 100%;
+  height: 250px;}
+
 .blog-3 .info .entry-post-tags {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2437,9 +2445,12 @@ section {
   .blog-3 .info .title {
     font-size: 24px;
     line-height: 32px;
+    color: #000;
+
   }
   .blog-3 .info .desc {
     margin-top: 15px;
+    color: #000;
   }
 }
 @media only screen and (max-width: 479px) {
@@ -2453,6 +2464,8 @@ section {
   display: block;
   max-width: 100%; /* Ensures the image does not exceed its container */
   height: auto; /* Retains the aspect ratio of the image */
+  color: #030f27;
+
 }
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 767px) {
@@ -2460,6 +2473,8 @@ section {
     /* Define your styles for smaller screens here */
     /* For example, decrease the width */
     width: 90%;
+    color: #030f27;
+
   }
 }
 
@@ -2469,6 +2484,8 @@ section {
     /* Define your styles for medium screens here */
     /* For example, reduce the width further */
     width: 80%;
+    color: #030f27;
+
   }
 }
 
@@ -2478,8 +2495,50 @@ section {
     /* Define your styles for larger screens here */
     /* For example, keep the width more constrained */
     max-width: 800px;
+    color: #030f27;
+
   }
 }
+ 
+/* Default styles for iframe */
+iframe {
+  width: 100%; /* Occupy full width */
+  height: 100%;/* Maintain aspect ratio */
+  max-width: 100%; /* Ensure it doesn't exceed the container width */
+  max-height: 100%;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 767px) {
+  iframe {
+    width: 100%; /* Occupy full width */
+  height: 100%;/* Maintain aspect ratio */
+  max-width: 100%; /* Ensure it doesn't exceed the container width */
+  max-height: 100%;
+  }
+}
+
+/* Additional media queries for other screen sizes if needed */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* Adjustments for medium-sized screens */
+  iframe {
+    width: 100%; /* Occupy full width */
+    height: 100%;/* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    max-height: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* Adjustments for larger screens */
+  iframe {
+    width: 100%; /* Occupy full width */
+    height: 100%;/* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    max-height: 100%;
+  }
+}
+
 
 .media {
   position: relative;
@@ -2683,10 +2742,10 @@ section {
   opacity: 1;
 }
 .blog-nav-links .nav-list .nav-item .inner a:hover .cate {
-  color: #a72727;
+  color: #fff;
 }
 .blog-nav-links .nav-list .nav-item .inner a:hover h6, .blog-nav-links .nav-list .nav-item .inner a:hover .h6 {
-  color: #944c4c;
+  color: #fff;
 }
 
 .comment-list-wrapper {
@@ -2823,7 +2882,11 @@ only screen and (max-width: 767px) {
     padding-left: 0;
   }
 }
+.sidebar-widget-list-post li a {
 
+  color: #e1d07a;
+  
+}
 /* Styles for sidebar widgets */
 .sidebar-widget {
   float: left;
@@ -2848,6 +2911,8 @@ only screen and (max-width: 767px) {
   .sidebar-widget-list-post li a {
     font-size: 16px;
     line-height: 22px;
+    color: #e1d07a;
+    
   }
 }
 .sidebar-widget-list-post li a:hover {
@@ -2873,7 +2938,7 @@ only screen and (max-width: 767px) {
   background: #F5F5F5;
 }
 .tagcloud a:hover {
-  color: #fff;
+  color: #a95656;
   background-color: #1292ee;
 }
 
